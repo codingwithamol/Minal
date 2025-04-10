@@ -1,0 +1,146 @@
+.mouse-effect {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+/*            background-color: rgba(255, 255, 255, 0.5);
+/*            background-color: rgba(255, 255, 255, 0.5);
+
+*/       
+background-color: red;
+ border-radius: 50%;
+    pointer-events: none;
+    animation: mouseRipple 0.8s ease-out forwards;
+    z-index: 2000;
+}
+
+@keyframes mouseRipple {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+
+  .about-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .description {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto 30px;
+    font-size: 1.2em;
+  }
+
+  .carousel2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+     border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    display: none;
+    padding: 30px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card.active {
+    display: block;
+  }
+
+  .card h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+  }
+
+  .card p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .btn {
+    background: #ffffff;
+    color: #2193b0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+
+  .card1{
+    background-color: black;
+    color: wheat;
+
+  }
+  .card2{
+    background-color: rgb(255, 209, 209);
+    color: rgb(0, 0, 0);
+
+  }
+  .card3{
+    background-color: rgb(144, 255, 160);
+    color: rgb(0, 0, 0);
+
+  }
+  .card4{
+    background-color: rgba(255, 219, 219, 0);
+    color: rgb(32, 32, 61);
+
+  }
+  .card5{
+    background-color: rgb(126, 249, 206);
+    color: wheat;
+
+  }
