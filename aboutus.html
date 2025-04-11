@@ -1,33 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manil Engineers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <!-- AOS CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-<script src="../script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details About the Main</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
-
+    /* Custom Styles */
+    .hero {
+      background: url('https://etimg.etb2bimg.com/thumb/msid-95368433,imgsize-52374,width-1200,height=765,overlay-etauto/industry/indias-manufacturing-sector-to-sustain-growth-momentum-for-next-6-9-months-survey.jpg') center center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .section-padding {
+      padding: 60px 0;
+    }
+    .testimonial {
+      background-color: #f8f9fa;
+      padding: 40px;
+      border-radius: 10px;
+      margin: 20px;
+    }
   </style>
 </head>
 <body>
-    
-    <script>
-        document.addEventListener('mousemove', function (e) {
-            const ripple = document.createElement('div');
-            ripple.classList.add('mouse-effect');
-            ripple.style.left = `${e.pageX}px`;
-            ripple.style.top = `${e.pageY}px`;
-            document.body.appendChild(ripple);
-      
-            setTimeout(() => {
-                ripple.remove();
-            }, 900);
-        });
-    </script>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">YourBrand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Welcome to Our Company</h1>
+      <p class="lead">We provide exceptional services to our clients.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/500x300" alt="About Us" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p>We are a team of professionals dedicated to delivering top-notch solutions to our clients. Our mission is to drive success through innovation and excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services to meet your needs.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Service One</h4>
+          <p>High-quality service tailored to your requirements.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Service Two</h4>
+          <p>Innovative solutions to drive your business forward.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Service Three</h4>
+          <p>Expert support to ensure your success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>What Our Clients Say</h2>
+        <p>Testimonials from our satisfied clients.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="testimonial">
+            <p>"The team provided exceptional service and support throughout our project."</p>
+            <h5>- Client Name</h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial">
+            <p>"Their innovative solutions helped our business grow exponentially."</p>
+            <h5>- Client Name</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 YourBrand. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
