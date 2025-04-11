@@ -137,16 +137,22 @@
           <form data-aos="fade-right">
             <div class="mb-3" data-aos="flip-left">
               <label for="name" class="form-label" data-aos="fade-right">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name" data-aos="fade-up">
+              <input type="text" class="form-control" name="user_name" placeholder="Your Name" required  data-aos="fade-up">
             </div>
             <div class="mb-3" data-aos="fade-up">
               <label for="email" class="form-label" data-aos="fade-up">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email" data-aos="fade-up">
+              <input type="email" class="form-control"  name="user_email" placeholder="Your Email" required  data-aos="fade-up">
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label for="message" class="form-label" data-aos="fade-up">Subject</label>
+              <input type="text" name="subject" placeholder="Subject" required />
             </div>
             <div class="mb-3" data-aos="fade-up">
               <label for="message" class="form-label" data-aos="fade-up">Message</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Your Message" data-aos="fade-up"></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required   data-aos="fade-up"></textarea>
             </div>
+            <input type="hidden" name="time" id="form-time" />
+
             <button type="submit" class="btn btn-primary" data-aos="fade-down" data-aos="fade-up">Send Message</button>
           </form>
         </div>
