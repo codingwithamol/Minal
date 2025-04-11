@@ -9,7 +9,7 @@
 background-color: rgb(50, 234, 234);
  border-radius: 50%;
     pointer-events: none;
-    animation: mouseRipple 0.8s ease-out forwards;
+    animation: mouseRipple 0.5s ease-out forwards;
     z-index: 2000;
 }
 
