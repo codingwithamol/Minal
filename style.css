@@ -1,12 +1,12 @@
 .mouse-effect {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
 /*            background-color: rgba(255, 255, 255, 0.5);
 /*            background-color: rgba(255, 255, 255, 0.5);
 
 */       
-background-color: red;
+background-color: rgb(50, 234, 234);
  border-radius: 50%;
     pointer-events: none;
     animation: mouseRipple 0.8s ease-out forwards;
@@ -54,8 +54,8 @@ h1 {
     position: absolute;
     width: 60%;
     height: 100%;
-     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0);
     color: #333;
     display: none;
     padding: 30px;
@@ -125,22 +125,22 @@ h1 {
 
   }
   .card2{
-    background-color: rgb(255, 209, 209);
-    color: rgb(0, 0, 0);
+    background-color: black;
+    color: wheat;
 
   }
   .card3{
-    background-color: rgb(144, 255, 160);
-    color: rgb(0, 0, 0);
+    background-color: black;
+    color: wheat;
 
   }
   .card4{
-    background-color: rgba(255, 219, 219, 0);
-    color: rgb(32, 32, 61);
+    background-color: black;
+    color: wheat;
 
   }
   .card5{
-    background-color: rgb(126, 249, 206);
+    background-color: black;
     color: wheat;
 
   }
