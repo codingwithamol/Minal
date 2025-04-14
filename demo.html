@@ -424,69 +424,7 @@
       margin-bottom: 15px;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
     } 
-    .qa-section .question {
-  background: #f0f0f0;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.qa-section .question:hover {
-  background: #e0e0e0;
-}
-
-.qa-section .question h5 {
-  margin: 0;
-  font-weight: 600;
-}
-
-.qa-section .answer {
-  display: none;
-  padding-top: 10px;
-  color: #333;
-  font-size: 15px;
-}
-
-
-
-
-
-.hero {
-  position: relative;
-  height: 100vh;
-  background-image: url('images/background1.jpg'); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  animation: zoomEffect 10s ease-in-out infinite alternate;
-  z-index: 1;
-  overflow: hidden;
-}
-
-@keyframes zoomEffect {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-/* Text Container with Background */
-.hero-text {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  padding: 20px 30px;
-  border-radius: 10px;
-  z-index: 2;
-}
-
-/* Optional: To ensure text stays on top */
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
+   
     
   </style>
 </head>
@@ -526,138 +464,6 @@
       <!-- Carousel -->
       
 
-      <section class="hero d-flex flex-column justify-content-center align-items-center">
-        <div class="container text-center text-white hero-text">
-          <h1 data-aos="fade-up" style="color: white;">Welcome to Manil Engineers</h1>
-          <p data-aos="fade-up" data-aos-delay="200" style="color: wheat;">Innovative Solutions for Industrial Excellence</p>
-        </div>
-      </section>
-      
-  
-
-
-
-
-
-      <section class="qa-section py-5">
-        <div class="container">
-          <h2 class="text-center mb-4" data-aos="fade-up">Frequently Asked Questions ?</h2>
-          <div class="accordion" id="questionList">
-            <!-- Question Template -->
-            <div class="question" onclick="toggleAnswer(0)">
-              <h5>1. What is the difference between synchronous and asynchronous programming?</h5>
-              <div class="answer">Synchronous code is executed line by line, while asynchronous code allows tasks to run in the background and doesn't block the main execution thread.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(1)">
-              <h5>2. What are closures in JavaScript?</h5>
-              <div class="answer">A closure is a function that retains access to its lexical scope even when executed outside of that scope.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(2)">
-              <h5>3. What is the difference between == and === in JavaScript?</h5>
-              <div class="answer">`==` compares values with type coercion, while `===` checks for strict equality (no type conversion).</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(3)">
-              <h5>4. What are promises and how do they work?</h5>
-              <div class="answer">Promises are objects representing the eventual completion or failure of an asynchronous operation. They have `.then()` and `.catch()` methods.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(4)">
-              <h5>5. What is the event loop in JavaScript?</h5>
-              <div class="answer">The event loop handles asynchronous callbacks by managing the call stack and task queue to execute code non-blockingly.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(5)">
-              <h5>6. How does memory management work in programming languages like C and Python?</h5>
-              <div class="answer">C requires manual memory management using `malloc` and `free`, while Python uses automatic garbage collection.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(6)">
-              <h5>7. Explain the concept of multithreading and concurrency.</h5>
-              <div class="answer">Multithreading is running multiple threads simultaneously within a process, while concurrency is managing multiple tasks over the same period.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(7)">
-              <h5>8. What is a deadlock and how can it be prevented?</h5>
-              <div class="answer">A deadlock occurs when two or more processes wait indefinitely for resources held by each other. Prevention involves resource hierarchy, timeouts, or avoiding circular waits.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(8)">
-              <h5>9. What are design patterns? Give examples.</h5>
-              <div class="answer">Design patterns are reusable solutions to common problems. Examples include Singleton, Factory, Observer, and Strategy.</div>
-            </div>
-      
-            <div class="question" onclick="toggleAnswer(9)">
-              <h5>10. What is the difference between REST and GraphQL?</h5>
-              <div class="answer">REST uses predefined endpoints and returns fixed data structures, while GraphQL lets clients specify exactly what data they need from a single endpoint.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-
-      <script>
-        let openAnswer = null;
-      
-        function toggleAnswer(index) {
-          const allAnswers = document.querySelectorAll('.answer');
-      
-          if (openAnswer !== null && openAnswer !== index) {
-            allAnswers[openAnswer].style.display = 'none';
-          }
-      
-          if (allAnswers[index].style.display === 'block') {
-            allAnswers[index].style.display = 'none';
-            openAnswer = null;
-          } else {
-            allAnswers[index].style.display = 'block';
-            openAnswer = index;
-          }
-        }
-      </script>
-      
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Sample Content Section -->
-      <section class="main-content py-5 cli">
-        <div class="container text-center">
-          <h2 class="mb-4" data-aos="fade-up">Our Expertise</h2>
-          <div class="row">
-            <div class="col-md-4" data-aos="zoom-in">
-              <i class="fas fa-cogs fa-3x mb-3"></i>
-              <h4>Mechanical Design</h4>
-              <p>We specialize in customized mechanical systems tailored to your project.</p>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-              <i class="fas fa-industry fa-3x mb-3"></i>
-              <h4>Industrial Automation</h4>
-              <p>Automate your plant with smart technology and high-end integrations.</p>
-            </div>
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-              <i class="fas fa-tools fa-3x mb-3"></i>
-              <h4>Installation Services</h4>
-              <p>From delivery to setup, we ensure precise and professional installation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-
-    
-
-      
-
     <!-- JavaScript dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -669,11 +475,7 @@
     </script>
 
     <!-- Activate Carousel -->
-    <script>
-      $('#demo').carousel({
-        interval: 4000  // 4 seconds
-      });
-    </script>
+   
 
 
 
