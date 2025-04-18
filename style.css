@@ -145,3 +145,29 @@ h1 {
     color: wheat;
 
   }
+
+
+
+
+  .client-section {
+     padding: 60px 0;
+  }
+
+  .client-logo {
+    max-width: 50%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
+
+  .client-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(0, 211, 253, 0.1);
+    width: 5%;
+  }
