@@ -751,7 +751,6 @@
        
       </div>
     </div>
-    <p>Total Visitors: <span id="visitor-count">0</span></p>
 
   </div>
   <script>
@@ -842,19 +841,7 @@
 
   </script>
 
-<script>
-  // Check if user already visited
-  if (!localStorage.getItem('hasVisited')) {
-    // Increment visitor count (dummy for now, since no server)
-    let count = localStorage.getItem('visitCount') || 0;
-    count = parseInt(count) + 1;
-    localStorage.setItem('visitCount', count);
-    localStorage.setItem('hasVisited', true);
-  }
 
-  // Display count
-  document.getElementById("visitor-count").textContent = localStorage.getItem('visitCount');
-</script>
 
 </body>
 
