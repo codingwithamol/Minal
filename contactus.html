@@ -945,7 +945,7 @@
       closeBtn?.addEventListener("click", () => {
         navMenu?.classList.remove("active");
         toggleVisibility(closeBtn, false);
-        toggleVisibility(hamburger, false);
+        toggleVisibility(hamburger, true);
       });
 
       // Toggle Services Dropdown
@@ -979,11 +979,12 @@
       document.body.appendChild(ripple);
 
       setTimeout(() => {
-        ripple.remove();
+          ripple.remove();
       }, 900);
-    });
+  });
 
   </script>
+
 
 
 

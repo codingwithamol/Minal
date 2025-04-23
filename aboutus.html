@@ -553,72 +553,79 @@
 
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Elements
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("navMenu");
-      const closeBtn = document.getElementById("closeBtn");
-      const servicesToggle = document.getElementById("servicesToggle");
-      const servicesDropdown = document.getElementById("servicesDropdown");
-      const arrow = document.getElementById("arrow");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Elements
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const closeBtn = document.getElementById("closeBtn");
+    const servicesToggle = document.getElementById("servicesToggle");
+    const servicesDropdown = document.getElementById("servicesDropdown");
+    const arrow = document.getElementById("arrow");
 
-      // Utility function to toggle visibility
-      const toggleVisibility = (element, show) => {
-        element.style.display = show ? "block" : "none";
-      };
+    // Utility function to toggle visibility
+    const toggleVisibility = (element, show) => {
+      element.style.display = show ? "block" : "none";
+    };
 
-      // Open menu
-      hamburger?.addEventListener("click", () => {
-        navMenu?.classList.add("active");
-        toggleVisibility(hamburger, false);
-        toggleVisibility(closeBtn, true);
-      });
-
-      // Close menu
-      closeBtn?.addEventListener("click", () => {
-        navMenu?.classList.remove("active");
-        toggleVisibility(closeBtn, false);
-        toggleVisibility(hamburger, true);
-      });
-
-      // Toggle Services Dropdown
-      servicesToggle?.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isOpen = servicesDropdown?.classList.toggle("show");
-        servicesToggle.parentElement?.classList.toggle("open", isOpen);
-        if (arrow) arrow.textContent = isOpen ? "▲" : "▼";
-      });
-
-      // Close dropdown if clicked outside
-      document.addEventListener("click", (e) => {
-        const clickedOutside =
-          !servicesToggle?.contains(e.target) &&
-          !servicesDropdown?.contains(e.target);
-
-        if (clickedOutside) {
-          servicesDropdown?.classList.remove("show");
-          servicesToggle?.parentElement?.classList.remove("open");
-          if (arrow) arrow.textContent = "▼";
-        }
-      });
+    // Open menu
+    hamburger?.addEventListener("click", () => {
+      navMenu?.classList.add("active");
+      toggleVisibility(hamburger, false);
+      toggleVisibility(closeBtn, true);
     });
 
+    // Close menu
+    closeBtn?.addEventListener("click", () => {
+      navMenu?.classList.remove("active");
+      toggleVisibility(closeBtn, false);
+      toggleVisibility(hamburger, true);
+    });
 
-    document.addEventListener('mousemove', function (e) {
-      const ripple = document.createElement('div');
-      ripple.classList.add('mouse-effect');
-      ripple.style.left = `${e.pageX}px`;
-      ripple.style.top = `${e.pageY}px`;
-      document.body.appendChild(ripple);
+    // Toggle Services Dropdown
+    servicesToggle?.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = servicesDropdown?.classList.toggle("show");
+      servicesToggle.parentElement?.classList.toggle("open", isOpen);
+      if (arrow) arrow.textContent = isOpen ? "▲" : "▼";
+    });
 
-      setTimeout(() => {
-          ripple.remove();
-      }, 900);
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (e) => {
+      const clickedOutside =
+        !servicesToggle?.contains(e.target) &&
+        !servicesDropdown?.contains(e.target);
+
+      if (clickedOutside) {
+        servicesDropdown?.classList.remove("show");
+        servicesToggle?.parentElement?.classList.remove("open");
+        if (arrow) arrow.textContent = "▼";
+      }
+    });
   });
 
-  </script>
-  <!-- Navigation -->
+
+  document.addEventListener('mousemove', function (e) {
+    const ripple = document.createElement('div');
+    ripple.classList.add('mouse-effect');
+    ripple.style.left = `${e.pageX}px`;
+    ripple.style.top = `${e.pageY}px`;
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 900);
+});
+
+</script>
+
+
+
+
+
+
+
+<!-- Navigation -->
   <header data-aos="fade-left">
     <nav class="navbar" data-aos="fade-down">
       <div class="logo">
