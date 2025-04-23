@@ -426,6 +426,97 @@
     } 
    
 
+
+
+    .customer-section {
+      width: 100%;
+      overflow: hidden;
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .customer-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: fit-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .carousel-container {
+      display: flex;
+      /* gap: 20px; */
+    }
+
+    .customer {
+      flex: 0 0 20%;
+      min-width: 200px;
+      max-width: 250px;
+      margin-right: 20px;
+      text-align: center;
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .customer img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .customer h3 {
+      font-size: 1rem;
+      margin: 8px 0 5px;
+      color: #222;
+    }
+
+    .customer p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .customer {
+        flex: 0 0 10%;
+        min-width: 180px;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .customer {
+        flex: 0 0 5%;
+        min-width: 140px;
+        max-width: 150px;
+      }
+    }
+  
+
+
+
+
+
+
 /* Loader style */
 .loader {
       width: 48px;
@@ -810,6 +901,67 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+<div class="customer-section">
+  <h2>Our Customers</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-container" id="customer-container">
+        <!-- Original Customers -->
+        <div class="customer">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Customer 1</h3>
+          <p>Eco-friendly construction leaders.</p>
+        </div>
+        <div class="customer">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Customer 2</h3>
+          <p>Top-rated real estate firm.</p>
+        </div>
+        <div class="customer">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Customer 3</h3>
+          <p>Premium marble supplier.</p>
+        </div>
+        <div class="customer">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Customer 4</h3>
+          <p>Innovative interiors company.</p>
+        </div>
+        <div class="customer">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Customer 5</h3>
+          <p>Modern architecture studio.</p>
+        </div>
+        <div class="customer" style="visibility: hidden; margin-right: 80px;"></div>
+
+        <!-- Repeat for infinite effect -->
+      </div>
+      <div class="carousel-container" id="customer-duplicate">
+        <!-- Same Customers cloned via JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  // Clone the customer cards for infinite scroll effect
+  const original = document.getElementById('customer-container');
+  const duplicate = document.getElementById('customer-duplicate');
+  duplicate.innerHTML = original.innerHTML;
+</script>
+
+
+
+
+
 
 <!-- Bootstrap 4 JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
