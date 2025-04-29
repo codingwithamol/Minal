@@ -23,6 +23,7 @@
     body {
       height: 100%;
       font-family: 'Segoe UI', Arial, sans-serif;
+
     }
 
     .page-wrapper {
@@ -62,7 +63,7 @@
       margin-left: 1px;
       /* box-shadow: 0px 0px 10px #ac4141; */
       /* border-radius: 8px; */
-  }
+    }
 
     @media (max-width: 991px) {
       .logo img {
@@ -86,7 +87,7 @@
 
     .nav-links li a {
       color: black;
-      
+
       text-decoration: none;
       padding: 0.5rem;
       font-weight: 700;
@@ -372,12 +373,20 @@
       transition: ease-out 1.5s;
       /* ensures image covers the area without distortion */
     }
+
     /* .carousel-img:hover{
       filter: brightness(2);
     } */
     .main-content {
       padding: 0%;
+      overflow: hidden;
 
+
+    }
+
+    /* footer start*/
+    .fro {
+      height: 300px;
     }
 
     .fro a:hover {
@@ -407,16 +416,27 @@
       text-shadow: 0px 2px 10px rgb(177, 177, 177);
 
     }
-
-    .hmz {
-      box-shadow: inset 0px 0px 5px white;
-
+ 
+    .ime img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
     }
-   .cli{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffffff, #eaf2f5);
-    color: black;
+    
+    .ime img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+    
+
+
+    /*Fpooter End*/
+    
+    .cli {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffffff, #eaf2f5);
+      color: black;
+    }
+
     .profile-img {
       width: 100px;
       height: 100px;
@@ -424,8 +444,8 @@
       object-fit: cover;
       margin-bottom: 15px;
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-    } 
-   
+    }
+
 
 
 
@@ -453,6 +473,7 @@
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
@@ -472,7 +493,7 @@
       background: #f1f1f1;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .customer img {
@@ -502,6 +523,10 @@
         min-width: 180px;
         max-width: 200px;
       }
+
+      .fro {
+        height: auto !important;
+      }
     }
 
     @media (max-width: 480px) {
@@ -511,15 +536,15 @@
         max-width: 150px;
       }
     }
-  
 
 
 
 
 
 
-/* Loader style */
-.loader {
+
+    /* Loader style */
+    .loader {
       width: 48px;
       height: 48px;
       margin: auto;
@@ -603,8 +628,7 @@
       backdrop-filter: blur(5px);
       /* Blur effect */
     }
-    
-    
+   
   </style>
 </head>
 
@@ -634,14 +658,14 @@
 
 
 
-  <div class="page-wrapper" >
+  <div class="page-wrapper">
 
     <header data-aos="fade-left">
       <nav class="navbar" data-aos="fade-down">
         <div class="logo">
           <img src="images/Manil logo final.png" alt="Logo">
         </div>
-        <div class="hamburger" id="hamburger" >&#9776;</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
         <div class="close-btn" id="closeBtn">&times;</div>
         <ul class="nav-links" id="navMenu">
           <li><a href="index.html">Home</a></li>
@@ -676,26 +700,21 @@
         <!-- Slides -->
         <div class="carousel-inner">
           <div class="carousel-item ">
-            <img
-              src="images/background1.jpg"
-              alt="Los Angeles" class="d-block w-100 carousel-img">
+            <img src="images/background1.jpg" alt="Los Angeles" class="d-block w-100 carousel-img">
             <div class="carousel-caption">
               <h3>Los Angeles</h3>
               <p>We had such a great time in LA!</p>
             </div>
           </div>
           <div class="carousel-item active">
-            <img src="images/background2.jpg"
-              alt="Chicago" class="d-block w-100 carousel-img">
+            <img src="images/background2.jpg" alt="Chicago" class="d-block w-100 carousel-img">
             <div class="carousel-caption">
               <h3>Chicago</h3>
               <p>Thank you, Chicago!</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img
-              src="images/background4.jpg"
-              alt="New York" class="d-block w-100 carousel-img">
+            <img src="images/background4.jpg" alt="New York" class="d-block w-100 carousel-img">
             <div class="carousel-caption">
               <h3>New York</h3>
               <p>We love the Big Apple!</p>
@@ -732,7 +751,7 @@
 
 
 
-<!-- <div class="cli">
+    <!-- <div class="cli">
     <div class="about-container" >
       <h1>⭐Happy Clients⭐</h1>
       <p class="description">We are a passionate team committed to delivering the best software solutions. Meet our team members below.</p>
@@ -798,179 +817,189 @@
 
 </div> -->
 
-<!-- Client Carousel Section -->
-<section class="client-section text-center">
-  <div class="container">
-    <h2 class="mb-5">Our Valuable Clients</h2>
+    <!-- Client Carousel Section -->
+    <section class="client-section text-center">
+      <div class="container">
+        <h2 class="mb-5">Our Valuable Clients</h2>
 
-    <div id="clientCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-      <div class="carousel-inner">
+        <div id="clientCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+          <div class="carousel-inner">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 1">
-                <h6>Client One</h6>
-                <p>Leading IT Solutions</p>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 1">
+                    <h6>Client One</h6>
+                    <p>Leading IT Solutions</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 2">
+                    <h6>Client Two</h6>
+                    <p>Creative Studio</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 3">
+                    <h6>Client Three</h6>
+                    <p>Marketing Experts</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 2">
-                <h6>Client Two</h6>
-                <p>Creative Studio</p>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 4">
+                    <h6>Client Four</h6>
+                    <p>Business Consultancy</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 5">
+                    <h6>Client Five</h6>
+                    <p>Tech Solutions</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 6">
+                    <h6>Client Six</h6>
+                    <p>Digital Agency</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 3">
-                <h6>Client Three</h6>
-                <p>Marketing Experts</p>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 7">
+                    <h6>Client Seven</h6>
+                    <p>Finance Corp</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 8">
+                    <h6>Client Eight</h6>
+                    <p>Startup Hub</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="text-center">
+                    <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png"
+                      class="client-logo" alt="Client 9">
+                    <h6>Client Nine</h6>
+                    <p>Engineering Works</p>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 4">
-                <h6>Client Four</h6>
-                <p>Business Consultancy</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 5">
-                <h6>Client Five</h6>
-                <p>Tech Solutions</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 6">
-                <h6>Client Six</h6>
-                <p>Digital Agency</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <!-- Carousel Controls -->
+          <a class="carousel-control-prev" href="#clientCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#clientCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 7">
-                <h6>Client Seven</h6>
-                <p>Finance Corp</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 8">
-                <h6>Client Eight</h6>
-                <p>Startup Hub</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="text-center">
-                <img src="https://i.pinimg.com/originals/73/f7/74/73f774aadea99db40027979c2081bad8.png" class="client-logo" alt="Client 9">
-                <h6>Client Nine</h6>
-                <p>Engineering Works</p>
-              </div>
-            </div>
-          </div>
         </div>
-
       </div>
+    </section>
 
-      <!-- Carousel Controls -->
-      <a class="carousel-control-prev" href="#clientCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#clientCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
 
+
+
+
+
+    <div class="customer-section">
+      <h2>Our Customers</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-container" id="customer-container">
+            <!-- Original Customers -->
+            <div class="customer">
+              <img src="images/logo.png" alt="Logo">
+              <h3>Customer 1</h3>
+              <p>Eco-friendly construction leaders.</p>
+            </div>
+            <div class="customer">
+              <img src="images/logo.png" alt="Logo">
+              <h3>Customer 2</h3>
+              <p>Top-rated real estate firm.</p>
+            </div>
+            <div class="customer">
+              <img src="images/logo.png" alt="Logo">
+              <h3>Customer 3</h3>
+              <p>Premium marble supplier.</p>
+            </div>
+            <div class="customer">
+              <img src="images/logo.png" alt="Logo">
+              <h3>Customer 4</h3>
+              <p>Innovative interiors company.</p>
+            </div>
+            <div class="customer">
+              <img src="images/logo.png" alt="Logo">
+              <h3>Customer 5</h3>
+              <p>Modern architecture studio.</p>
+            </div>
+            <div class="customer" style="visibility: hidden; margin-right: 80px;"></div>
+
+            <!-- Repeat for infinite effect -->
+          </div>
+          <div class="carousel-container" id="customer-duplicate">
+            <!-- Same Customers cloned via JS -->
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+
+
+
+    <script>
+      // Clone the customer cards for infinite scroll effect
+      const original = document.getElementById('customer-container');
+      const duplicate = document.getElementById('customer-duplicate');
+      duplicate.innerHTML = original.innerHTML;
+    </script>
 
 
 
 
 
 
-<div class="customer-section">
-  <h2>Our Customers</h2>
-  <div class="carousel-wrapper">
-    <div class="carousel-track" id="carousel-track">
-      <div class="carousel-container" id="customer-container">
-        <!-- Original Customers -->
-        <div class="customer">
-          <img src="images/logo.png" alt="Logo">
-          <h3>Customer 1</h3>
-          <p>Eco-friendly construction leaders.</p>
-        </div>
-        <div class="customer">
-          <img src="images/logo.png" alt="Logo">
-          <h3>Customer 2</h3>
-          <p>Top-rated real estate firm.</p>
-        </div>
-        <div class="customer">
-          <img src="images/logo.png" alt="Logo">
-          <h3>Customer 3</h3>
-          <p>Premium marble supplier.</p>
-        </div>
-        <div class="customer">
-          <img src="images/logo.png" alt="Logo">
-          <h3>Customer 4</h3>
-          <p>Innovative interiors company.</p>
-        </div>
-        <div class="customer">
-          <img src="images/logo.png" alt="Logo">
-          <h3>Customer 5</h3>
-          <p>Modern architecture studio.</p>
-        </div>
-        <div class="customer" style="visibility: hidden; margin-right: 80px;"></div>
-
-        <!-- Repeat for infinite effect -->
-      </div>
-      <div class="carousel-container" id="customer-duplicate">
-        <!-- Same Customers cloned via JS -->
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<script>
-  // Clone the customer cards for infinite scroll effect
-  const original = document.getElementById('customer-container');
-  const duplicate = document.getElementById('customer-duplicate');
-  duplicate.innerHTML = original.innerHTML;
-</script>
-
-
-
-
-
-
-<!-- Bootstrap 4 JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <div class="container-fluid">
-      <div class="row mt-1  fro text-light hmz">
-        <div class="col-md-4" data-aos="fade-up">
+      <div class="row mt-1  fro text-light hmz" style="background-color: #222;">
+
+        <div class="col-md-2" data-aos="fade-up">
           <div class="footer-social mt-5">
             <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
             <a href="#"><img src="images/facebook.png" alt="Facebook" style=" width: 52px;
@@ -993,7 +1022,7 @@
                 <div><a href="aboutus.html" style="color: white;"> About Us</a></div>
                 <div><a href="services.html" style="color: white;">Services</a></div>
                 <div><a href="Certificates.html" style="color: white;">Certificates</a></div>
-                      
+
               </div>
               <div class="col-md-6 col-6  ">
                 <div><a href="Infrastructure.html" style="color: white;">Infrastructure</a></div>
@@ -1005,15 +1034,90 @@
           </center>
 
         </div>
-       
-          <div class="col-md-4 mt-5  " data-aos="fade-down" >
-            <h3 class="para-f ml-5">Contact Us</h3>
-            <p class="para-f ml-5"><i class="fas fa-map-marker-alt text-info"></i> 123 Street Name, City, Country</p>
-            <p class="para-f ml-5"><i class="fas fa-phone text-info"></i> +91-1234567890</p>
-            <p class="para-f ml-5"><i class="fas fa-envelope text-info"></i> info@example.com</p>
+
+        <div class="col-md-3 mt-5  " data-aos="fade-down">
+          <h3 class="para-f ml-5">Contact Us</h3>
+          <p class="para-f ml-5"><i class="fas fa-map-marker-alt text-info"></i> 123 Street Name, City, Country</p>
+          <p class="para-f ml-5"><i class="fas fa-phone text-info"></i> +91-1234567890</p>
+          <p class="para-f ml-5"><i class="fas fa-envelope text-info"></i> info@example.com</p>
+        </div>
+        <div class="col-md-3"  data-aos="fade-up">
+         <center> <h3 class="para-f   mt-5">Contact Us</h3>
+          <div class="row">
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://www.freepnglogos.com/uploads/logo-3d-png/3d-company-logos-design-logo-online-2.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://www.freepnglogos.com/uploads/logo-3d-png/3d-company-logos-design-logo-online-2.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://www.freepnglogos.com/uploads/logo-3d-png/3d-company-logos-design-logo-online-2.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+
+
           </div>
+          <div class="row">
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://png.pngtree.com/png-clipart/20220509/original/pngtree-city-skylines-circle-badge-logo-png-image_7667600.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://png.pngtree.com/png-clipart/20220509/original/pngtree-city-skylines-circle-badge-logo-png-image_7667600.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+            <div class="col-md-4 col-4">
+              <div class="ime " style="width: 50px; height:50px;">
+                <img src="https://png.pngtree.com/png-clipart/20220509/original/pngtree-city-skylines-circle-badge-logo-png-image_7667600.png"
+                  height="100%" width="100%" alt="">
+
+              </div>
+              <h6 class="mt-3">Hello</h6>
+            </div>
+
+
+          </div>
+        </center>
+        
+        </div>
+        
        
+    
       </div>
+    </div> <!-- end of your .row -->
+
+    <!-- Footer bottom copyright section -->
+    <div class="text-center text-light  " style="background-color: #222;">
+      <p class="mb-1">Copyright &copy; 2025 Minal INDIA. All rights reserved.</p>
+      <p>
+        <a href="privacy-policy.html" class="text-light" style="text-decoration: underline;">Privacy Policy</a> |
+        <a href="terms-and-conditions.html" class="text-light" style="text-decoration: underline;">Terms & Conditions</a>
+      </p>
+    </div>
+    
+      
     </div>
 
   </div>
@@ -1099,9 +1203,9 @@
       document.body.appendChild(ripple);
 
       setTimeout(() => {
-          ripple.remove();
+        ripple.remove();
       }, 900);
-  });
+    });
 
   </script>
 
